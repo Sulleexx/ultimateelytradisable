@@ -1,0 +1,12 @@
+name: UltimateElytraDisable
+version: '1.0-SNAPSHOT'
+main: org.sulyax.ultimateElytraDisable.UltimateElytraDisable
+api-version: '1.16'
+description: Гибкий контроль элитр с поддержкой черного/белого списка миров
+
+commands:
+  ultimateelytradisable:
+    description: Управление настройками UltimateElytraDisable
+    usage: /ultimateelytradisable <addworld|removeworld|listworlds|purge|reload|enable|disable|status|bypass|help>
+    permission: ued.admin
+    aliases: [ued]

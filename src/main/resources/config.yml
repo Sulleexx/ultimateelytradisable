@@ -1,0 +1,54 @@
+# Elytra disable plugin config (English)
+# -------------------------------------------------------------
+# Change the values below and restart/reload
+# the plugin to apply.
+#
+# Color codes: use standard Minecraft color codes (e.g. &c, &4, &6, &7)
+# -------------------------------------------------------------
+
+# Master switch: enable/disable the plugin's functionality
+enabled: true
+
+# Mode selector:
+# true  = disable flight ONLY in the listed target-worlds
+# false = disable flight in ALL worlds EXCEPT the listed target-worlds
+disable-in-listed: true
+
+# List of world names (use the folder/world names exactly as on the server)
+# Example: world, world_nether, world_the_end
+target-worlds:
+  - world_the_end
+
+# Permission that allows a player to bypass the flight restriction
+# Example: "ued.bypass" -> give to staff or specific groups who should still fly
+bypass-permission: "ued.bypass"
+
+# Permission required to manage the plugin (commands like reload, toggle)
+admin-permission: "ued.admin"
+
+# Use the actionbar for messages instead of chat messages
+# true  = show a short message on the actionbar
+# false = send a chat message to the player
+use-actionbar: true
+
+# If true, the plugin will try to prevent the player from re-enabling flight
+# while inside a restricted world (e.g. disabling flight toggle until they leave)
+prevent-reenable: true
+
+# Minimum time (milliseconds) between repeated messages to the same player
+# Prevents message spam. 2500 = 2.5 seconds
+message-cooldown-ms: 2500
+
+# Log attempts to fly in restricted worlds in the server console/log
+log-attempts: true
+
+# Actionbar (or chat) message shown when a player tries to fly in a restricted world
+# You can use {world} placeholder
+actionbar-message: "&c✈ Flight is disabled in world {world}!"
+
+# Per-world custom messages. If a world has a custom message it will be used
+# instead of the default message. Use the same world names as in target-worlds.
+per-world-messages:
+  world_the_end: "&4✈ Flight is disabled in The End!"
+  world_nether: "&4✈ Flight is disabled in The Nether!"
+  default: "&c✈ Flight is disabled in this world!"
